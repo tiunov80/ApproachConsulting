@@ -1,0 +1,19 @@
+// Vendors and external stylesheets
+@import "core_project/_bootstrap_custom";
+
+// Base stuff
+@import "core_project/_mixins";
+@import "core_project/_fonts";
+@import "core_project/_colors";
+//@import "core_project/_icons";
+@import "core_project/_buttons";
+//@import "core_project/_checkbox";
+//@import "core_project/_bootstrap-select";
+
+// Layout related stylesheets
+@import "layout/_preloader";
+@import "layout/_common";
+@import "layout/_header";
+@import "layout/_main_carousel";
+@import "layout/_menu";
+@import "layout/_footer";

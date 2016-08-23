@@ -1,0 +1,820 @@
+@import "_sprite";
+$ieSprite: '.lt-ie9' !default;
+$sprite: map-get($icons, sprite) !default;
+$baseFontSize: 16px !default;
+
+@import '_mixin_sprite';
+
+.icon {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+	margin: 0 2px;
+	&.map_icon {
+		@include sprite(map-view-mobile);
+		&.active {
+			@include sprite(map-view-mobile-hover);
+		}
+	}
+	&.map_small,
+	&.map_small {
+		background: url('../img/icons.svg') 0 -427px no-repeat;
+		width: 20px;
+		height: 22px
+	}
+	&.map_small {
+		.active & {
+			background: url('../img/icons.svg') 0 -454px no-repeat;
+			width: 20px;
+			height: 22px
+		}
+	}
+	&.clock_small_icon {
+		background: url('../img/icons.svg') 0 -480px no-repeat;
+		width: 15px;
+		height: 15px
+	}
+	&.like_icon,
+	&.liked_icon {
+		background: url('../img/icons.svg') 0 -112px no-repeat;
+		width: 25px;
+		height: 23px
+	}
+	&.liked_icon {
+		background-position: 0 -135px;
+		height: 21px
+	}
+	&.share_icon {
+		@include sprite(share);
+	}
+	&.share_black_icon {
+		@include sprite(share-black);
+	}
+	&.tags_icon {
+		@include sprite(tags);
+	}
+	&.web_icon {
+		@include sprite(website);
+	}
+	&.phone_icon {
+		@include sprite(phone);
+	}
+	&.date_icon {
+		@include sprite(date);
+	}
+	&.date_circle_icon {
+		@include sprite(date_circle);
+	}
+	&.prise_icon {
+		@include sprite(price);
+	}
+	&.clock_icon {
+		@include sprite(time);
+	}
+	&.people_icon {
+		@include sprite(people);
+	}
+	&.luggage_icon {
+		@include sprite(luggage);
+	}
+	&.luggage_circle_icon {
+		@include sprite(luggage_circle);
+	}
+	&.cond_icon {
+		@include sprite(air-conditioning);
+	}
+	&.cond_circle_icon {
+		@include sprite(air_cond_circle);
+	}
+	&.transmission_icon {
+		@include sprite(transmission);
+	}
+	&.transmission_circle_icon {
+		@include sprite(transmission_circle);
+	}
+	&.place_icon {
+		@include sprite(place);
+	}
+	&.date_icon_small_black {
+		@include sprite(date_icon_small_black);
+	}
+	&.info_icon {
+		@include sprite(info);
+	}
+	&.info_circle_icon {
+		@include sprite(info_circle);
+	}
+	&.place_circle_icon {
+		@include sprite(place_circle);
+	}
+	&.persons_icon {
+		@include sprite(persons);
+	}
+	&.edit_icon {
+		@include sprite(name_active);
+	}
+	&.accept_icon {
+		width: 14px;
+		height: 11px;
+		background: url('../img/icons.svg') 0 1px no-repeat;
+	}
+	&.remove_icon {
+		width: 14px;
+		height: 14px;
+		background: url('../img/icons.svg') 0 -498px no-repeat;
+	}
+	&.resend_icon {
+		width: 18px;
+		height: 16px;
+		background: url('../img/icons.svg') 0 -515px no-repeat;
+	}
+	&.like_gray_icon {
+		width: 16px;
+		height: 16px;
+		background: url('../img/icons.svg') 0 -355px no-repeat;
+	}
+	&.comment_gray_icon {
+		width: 18px;
+		height: 16px;
+		background: url('../img/icons.svg') 0 -96px no-repeat;
+	}
+	&.added_gray_icon {
+		width: 16px;
+		height: 16px;
+		background: url('../img/icons.svg') 0 -10px no-repeat;
+	}
+	&.booked_gray_icon {
+		width: 17px;
+		height: 14px;
+		background: url('../img/icons.svg') 0 -48px no-repeat;
+	}
+
+	&.user_icon {
+		width: 22px;
+		height: 23px;
+		background: url('../img/icons.svg') 0 -534px no-repeat;
+	}
+	&.settings_active_icon {
+		width: 20px;
+		height: 21px;
+		background: url('../img/icons.svg') 0 -26px no-repeat;
+	}
+	&.singout_icon {
+		width: 26px;
+		height: 22px;
+		background: url('../img/icons.svg') 0 -303px no-repeat;
+	}
+}
+.back_btn {
+	&:before {
+		@include iconbefore();
+		@include sprite(back);
+	}
+}
+.trip_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(my-trips);
+	}
+	&:hover {
+		&:before {
+			@include sprite(my-trips-hover);
+		}
+	}
+}
+.note_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(notifications);
+	}
+	&:hover {
+		&:before {
+			@include sprite(notifications-hover);
+		}
+	}
+	.open & {
+		&:before {
+			@include sprite(notifications-white);
+		}
+	}
+}
+.currency_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(currency-icon);
+	}
+	&:hover {
+		&:before {
+			@include sprite(currency-icon-hover);
+		}
+	}
+	.open & {
+		&:before {
+			@include sprite(currency-icon-white);
+		}
+	}
+}
+.icon_label {
+	&:before {
+		@include iconbefore();
+		@include sprite(checkmark);
+	}
+}
+.depart_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(depart_circle);
+	}
+}
+.return_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(return);
+	}
+}
+.date_icon_inner {
+	&:before {
+		@include iconbefore();
+		@include sprite(date_circle);
+	}
+}
+.change_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(change-planes);
+	}
+}
+.clock_icon_inner {
+	&:before {
+		@include iconbefore();
+		@include sprite(time);
+	}
+}
+///////////////////////////////// left menu icons
+.activity_icon {
+	a {
+		&:before {
+			@include iconbefore();
+			@include sprite(activity);
+		}
+	}
+	&:hover,
+	&.active {
+		a {
+			&:before {
+				@include sprite(activity-hover);
+			}
+		}
+	}
+}
+.flight_icon {
+	a {
+		&:before {
+			@include iconbefore();
+			@include sprite(flight);
+		}
+	}
+	&:hover,
+	&.active {
+		a {
+			&:before {
+				@include sprite(flight-hover);
+			}
+		}
+	}
+}
+.hotel_icon {
+	a {
+		&:before {
+			@include iconbefore();
+			@include sprite(hotel);
+		}
+	}
+	&:hover,
+	&.active {
+		a {
+			&:before {
+				@include sprite(hotel-hover);
+			}
+		}
+	}
+}
+.car_icon {
+	a {
+		&:before {
+			@include iconbefore();
+			@include sprite(car);
+		}
+	}
+	&:hover,
+	&.active {
+		a {
+			&:before {
+				@include sprite(car-hover);
+			}
+		}
+	}
+}
+.itinerary_icon {
+	a {
+		&:before {
+			@include iconbefore();
+			@include sprite(itinerary);
+		}
+	}
+	&:hover,
+	&.active {
+		a {
+			&:before {
+				@include sprite(itinerary-hover);
+			}
+		}
+	}
+}
+.settings_icon {
+	a {
+		&:before {
+			@include iconbefore();
+			@include sprite(settings);
+		}
+	}
+	&:hover,
+	&.active {
+		a {
+			&:before {
+				@include sprite(settings-hover);
+			}
+		}
+	}
+}
+/////////////////////////////////
+.save_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(saved);
+	}
+	&:hover,
+	&.active {
+		&:before {
+			@include sprite(saved-blue);
+		}
+	}
+}
+.search_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(search);
+	}
+	&:hover,
+	&.active {
+		&:before {
+			@include sprite(search-blue);
+		}
+	}
+}
+.expand_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(expand);
+	}
+	&.type8 {
+		&:before {
+			@include sprite(expand-blue);
+		}
+	}
+}
+.collapse_icon {
+	&:before {
+		@include iconbefore();
+		@include sprite(collapse);
+	}
+	&.type8 {
+		&:before {
+			@include sprite(collapse-blue);
+		}
+	}
+}
+.guest_form_icon {
+	&:before {
+		position: absolute;
+		bottom: 9px;
+		left: 10px;
+		opacity: 0.6;
+		@include iconbefore();
+		@include sprite(people);
+	}
+}
+.date_form_icon {
+	&:before {
+		position: absolute;
+		bottom: 9px;
+		left: 10px;
+		@include iconbefore();
+		@include sprite(calendar);
+	}
+}
+.location_form_icon {
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 12px;
+		left: 11px;
+		width: 12px;
+		height: 16px;
+		background: url('../img/icons.svg') no-repeat 0 -407px;
+	}
+}
+.hamburger_icon {
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	height: 2px;
+	width: 20px;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		height: 2px;
+		width: 20px;
+	}
+	&:before {
+		top: -6px;
+	}
+	&:after {
+		bottom: -6px;
+	}
+}
+///////////////////////////////// details tabs
+.details_tab {
+	.icon {
+		&:before {
+			@include iconbefore();
+			@include sprite(details-blue);
+		}
+	}
+	&.active,
+	&.ReactTabs__Tab--selected {
+		.icon {
+			&:before {
+				@include sprite(details-white);
+			}
+		}
+	}
+}
+.comments_tab {
+	.icon {
+		&:before {
+			@include iconbefore();
+			@include sprite(comments-blue);
+		}
+	}
+	&.active,
+	&.ReactTabs__Tab--selected {
+		.icon {
+			&:before {
+				@include sprite(comments-white);
+			}
+		}
+	}
+}
+.staying_tab {
+	.icon {
+		&:before {
+			@include iconbefore();
+			@include sprite(staying-blue);
+		}
+	}
+	&.active,
+	&.ReactTabs__Tab--selected {
+		.icon {
+			&:before {
+				@include sprite(staying-white);
+			}
+		}
+	}
+}
+.rates_tab {
+	.icon {
+		&:before {
+			@include iconbefore();
+			@include sprite(rates-blue);
+		}
+	}
+	&.active,
+	&.ReactTabs__Tab--selected {
+		.icon {
+			&:before {
+				@include sprite(rates-white);
+			}
+		}
+	}
+}
+.review_tab {
+	.icon {
+		&:before {
+			@include iconbefore();
+			@include sprite(review-blue);
+		}
+	}
+	&.active,
+	&.ReactTabs__Tab--selected {
+		.icon {
+			&:before {
+				@include sprite(review-white);
+			}
+		}
+	}
+}
+.tickets_tab {
+	.icon {
+		&:before {
+			@include iconbefore();
+			@include sprite(tickets-blue);
+		}
+	}
+	&.active,
+	&.ReactTabs__Tab--selected {
+		.icon {
+			&:before {
+				@include sprite(tickets-white);
+			}
+		}
+	}
+}
+//stars block
+.star_rate {
+	.star {
+		float: left;
+		width: 18px;
+		height: 18px;
+		background: url("../img/icons.svg") no-repeat 0 -389px;
+		margin-left: 10px;
+	}
+	.star.empty {
+		background-position: 0 -371px;
+	}
+	.star:first-child {
+		margin: 0;
+	}
+	&.sm_size {
+		.star {
+			background-position: 0 -340px;
+			margin-left: 2px;
+			width: 16px;
+			height: 15px;
+		}
+		.star.empty {
+			background-position: 0 -325px;
+		}
+	}
+}
+//routs icon
+.rout_icon {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 1px;
+	border-bottom: 1px solid $color_active;
+	top: -5px;
+	margin: 0 5px;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -4px;
+		left: 0;
+		border-radius: 50%;
+		background: $color_active;
+		width: 10px;
+		height: 10px;
+	}
+	&:after {
+		left: auto;
+		right: 0;
+	}
+	&.next {
+		&:after {
+			background: $def_light;
+			border: 1px solid $color_active;
+		}
+	}
+}
+//form inputs with background
+.name_inp,
+.destination_inp,
+.date_inp {
+	background: url('../img/icons.svg') no-repeat;
+}
+.name_inp {
+	background-position: 9px -591px
+}
+.destination_inp {
+	background-position: 9px -559px
+}
+.date_inp {
+	background-position: 9px -621px
+}
+//icons for hotel page
+.icon_inline {
+	position: relative;
+	padding-left: 30px;
+	&:before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 18px;
+		height: 18px;
+		background: url("../img/small_icons_sprite.png") no-repeat;
+	}
+}
+.cond_icon:before {
+	background-position: 0 0;
+}
+.bar_icon:before {
+	background-position: -28px 0;
+}
+.shop_icon:before {
+	background-position: 1px -26px;
+}
+.gym_icon:before {
+	background-position: -25px -22px;
+	width: 20px
+}
+.internet_icon:before {
+	background-position: 0 -50px;
+}
+.pool_icon:before {
+	background-position: 0 -74px;
+}
+.restar_icon:before {
+	background-position: -28px -73px;
+	width: 20px;
+}
+.room_icon:before {
+	background-position: 0 -97px;
+}
+.wifi_icon:before {
+	background-position: -28px -50px;
+}
+//
+//Filter icons
+.filter_icon {
+	position: fixed;
+	z-index: 100;
+	bottom: 70px;
+	right: 9px;
+	width: 68px;
+	height: 68px;
+	cursor: pointer;
+	background: url("../img/filters_icons.svg") no-repeat 0 -68px;
+	&.active {
+		background-position: 0 0;
+	}
+	@media (min-width: $screen-sm-min) {
+		display: none;
+	}
+}
+//icons from icons.svg
+//temp?
+
+//.icon-accept-checkmark {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 0;
+//	background-repeat: no-repeat
+//}
+//.icon-accept-checkmark-dims {
+//	width: 14px;
+//	height: 11px
+//}
+//.icon-added {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -11px;
+//	background-repeat: no-repeat
+//}
+//.icon-added-dims {
+//	width: 16px;
+//	height: 15px
+//}
+//.icon-alert-settings {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -26px;
+//	background-repeat: no-repeat
+//}
+//.icon-alert-settings-dims {
+//	width: 20px;
+//	height: 21px
+//}
+//.icon-booked {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -47px;
+//	background-repeat: no-repeat
+//}
+//.icon-booked-dims {
+//	width: 18px;
+//	height: 15px
+//}
+//.icon-comment {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -96px;
+//	background-repeat: no-repeat
+//}
+//.icon-comment-dims {
+//	width: 18px;
+//	height: 16px
+//}
+//.icon-pin-red, .icon-pin-red\:regular {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -156px;
+//	background-repeat: no-repeat
+//}
+//.icon-pin-red-dims {
+//	width: 29px;
+//	height: 36px
+//}
+//.icon-pin-white {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -192px;
+//	background-repeat: no-repeat
+//}
+//.icon-pin-white-dims {
+//	width: 37px;
+//	height: 44px
+//}
+//.icon-remove-cross {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -272px;
+//	background-repeat: no-repeat
+//}
+//.icon-remove-cross-dims {
+//	width: 13px;
+//	height: 13px
+//}
+//.icon-resend {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -285px;
+//	background-repeat: no-repeat
+//}
+//.icon-resend-dims {
+//	width: 18px;
+//	height: 18px
+//}
+//.icon-sign-out, .icon-sign-out\:regular {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -303px;
+//	background-repeat: no-repeat
+//}
+//.icon-sign-out-dims {
+//	width: 26px;
+//	height: 22px
+//}
+//.icon-star-line-orange-small {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -325px;
+//	background-repeat: no-repeat
+//}
+//.icon-star-line-orange-small-dims {
+//	width: 16px;
+//	height: 15px
+//}
+//.icon-star-orange-small {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -340px;
+//	background-repeat: no-repeat
+//}
+//.icon-star-orange-small-dims {
+//	width: 16px;
+//	height: 15px
+//}
+//.icon-thumb-up, .icon-thumb-up\:regular {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -355px;
+//	background-repeat: no-repeat
+//}
+//.icon-thumb-up-dims {
+//	width: 16px;
+//	height: 16px
+//}
+//.icon-yellow-line-star {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -371px;
+//	background-repeat: no-repeat
+//}
+//.icon-yellow-line-star-dims {
+//	width: 18px;
+//	height: 18px
+//}
+//.icon-yellow-star {
+//	background-image: url('icons/icons.svg');
+//	background-position: 0 -389px;
+//	background-repeat: no-repeat
+//}
+//.icon-yellow-star-dims {
+//	width: 18px;
+//	height: 18px
+//}

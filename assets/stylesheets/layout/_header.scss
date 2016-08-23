@@ -1,0 +1,86 @@
+.header {
+	background: rgba(255, 255, 255, 0.8);
+	@media (min-width: $screen-sm-min) {
+		background: rgba(255, 255, 255, 0.6);
+	}
+	.container {
+		min-height: 50px;
+		@media (min-width: $screen-sm-min) {
+			min-height: 94px;
+		}
+		@media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+			width: 100%;
+			padding: 0 20px;
+		}
+	}
+	.logo {
+		position: absolute;
+		top: 1px;
+		left: 20px;
+		width: 128px;
+		height: 46px;
+		background: url("../img/logo.png") no-repeat;
+		background-size: cover;
+		margin: 0 !important;
+		z-index: 1;
+		float: none;
+		padding: 0;
+		font-size: 0;
+		line-height: normal;
+		@media (min-width: $screen-sm-min) {
+			width: 245px;
+			height: 93px;
+			top: 0;
+		}
+		@media (min-width: $screen-md-min) {
+			left: 0;
+		}
+	}
+	.navbar-collapse {
+
+		background: $def_light;
+		border-top: 1px solid $bordercolor;
+		border-bottom: 1px solid $bordercolor;
+
+		@media (min-width: $screen-sm-min) {
+			background: transparent;
+			border: none;
+			top: 36px;
+			position: relative;
+		}
+	}
+	.nav {
+		&.top_menu {
+			@media (min-width: $screen-md-min) {
+				margin: 0 -15px 0 0;
+			}
+		}
+		a {
+			color: $default;
+			font-family: $bold_font;
+			@include fontsize(1.4);
+			text-transform: uppercase;
+			padding: 0;
+			margin: 0 0 20px 20px;
+			@media (min-width: $screen-sm-min) {
+				margin: 0 0 0 30px;
+			}
+			@media (min-width: $screen-sm-min) and (max-width: 896px) {
+				margin: 0 9px;
+				@include fontsize(1.2);
+			}
+			@media (min-width: 896px) and (max-width: $screen-md-min) {
+				margin: 0 12px;
+			}
+			&.active,
+			&:focus,
+			&:hover {
+				color: $color_active;
+				background: transparent;
+			}
+		}
+	}
+	.navbar-toggle .icon-bar {
+		background: $color_active;
+	}
+}

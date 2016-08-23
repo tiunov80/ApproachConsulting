@@ -1,0 +1,67 @@
+$base-border-radius: 4px;
+.btn {
+	position: relative;
+	background: $color_active;
+	color: $def_light;
+	border-radius: $base-border-radius;
+	padding: 0 15px;
+	font-family: $bold_font;
+	&:hover,
+	&:focus {
+		opacity: 0.9;
+		color: $def_light;
+		outline: none;
+	}
+	&.active,
+	&:active {
+		box-shadow: none;
+		outline: none;
+	}
+	&.info_btn {
+		background: rgba(255, 255, 255, 0.91);
+		height: 42px;
+		line-height: 38px;
+		@include fontsize(1.6);
+		@media (min-width: $screen-sm-min) {
+			@include fontsize(2.0);
+		}
+		color: $color_active;
+		border-radius: 0;
+		&:after {
+			content: "";
+			//border-top: 20px solid transparent;
+			//border-bottom: 20px solid transparent;
+			//border-left: 20px solid #f1f8f1;
+			position: absolute;
+			right: -18px;
+			top: -1px;
+			height: 42px;
+			width: 17px;
+			background: url("../img/corner.png") no-repeat;
+			background-size: cover;
+		}
+		&.type2 {
+			background: #f0f8f0;
+			&:after {
+				background: url("../img/corner_2.png") no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}
+//.type2 {
+//	background: $def_color;
+//	border: 1px solid $def_color;
+//}
+//.btn-danger {
+//	background: transparent;
+//	border: 1px solid $def_color;
+//	color: $def_color;
+//	&:hover,
+//	&:active,
+//	&:focus {
+//		color: #ffffff;
+//		border: 1px solid #d43f3a;
+//		background: #d43f3a !important;
+//	}
+//}

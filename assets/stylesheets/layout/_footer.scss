@@ -1,0 +1,43 @@
+.footer {
+	min-height: 240px;
+	color: #ffffff;
+	background: #333333;
+
+	padding: 15px 0;
+	@media (min-width: $screen-sm-min) {
+
+	}
+
+	.address_info,
+	.social_info {
+		@media (min-width: $screen-sm-min) {
+			position: absolute;
+		}
+	}
+	.address_info {
+		top: 83px;
+		left: 15px;
+		font-family: $light_font;
+	}
+	.social_info {
+		top: 100px;
+		right: 15px;
+		.lbl_txt {
+			position: relative;
+			top: -20px;
+		}
+		.tw_icon {
+			background: url("../img/tw.png") no-repeat;
+		}
+		.in_icon {
+			background: url("../img/in.png") no-repeat;
+		}
+		.icon {
+			display: inline-block;
+			width: 46px;
+			height: 46px;
+			background-size: cover;
+			margin-left: 30px;
+		}
+	}
+}

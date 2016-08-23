@@ -1,0 +1,83 @@
+//exception mixin
+@mixin when-inside($selector) {
+	#{$selector} & {
+		@content;
+	}
+}
+//link hover mixin
+@mixin hover_link($height, $color) {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: $height;
+	bottom: 0;
+	left: 0;
+	background-color: $color;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+@mixin hover_link_hover($scaleX) {
+	visibility: visible;
+	-webkit-transform: scaleX($scaleX);
+	transform: scaleX($scaleX);
+}
+//icons inside container
+@mixin icon($width, $height, $position) {
+	&::before {
+		position: $position;
+		content: '';
+		display: inline-block;
+		width: $width;
+		height: $height;
+		//temp?
+		border: 1px solid red;
+	}
+}
+//icons inside container
+@mixin iconbefore() {
+	content: '';
+	display: inline-block;
+	margin-right: 9px;
+	vertical-align: middle;
+}
+// Helper to determine the size
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+//font size mixin
+@mixin fontsize($sizeValue: 1.6) {
+	font-size: ($sizeValue * 10) + px;
+	font-size: $sizeValue + rem;
+}
+@mixin fontweight($weight) {
+	font-weight: $weight;
+}
+// ... text overflow ellipsis ...
+@mixin truncateText($overflow: ellipsis) {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+//border radius mixins
+//individual mixin for each corner
+@mixin border-top-left-radius($corner-radius) {
+	border-top-left-radius: $corner-radius;
+}
+@mixin border-bottom-left-radius($corner-radius) {
+	border-bottom-left-radius: $corner-radius;
+}
+@mixin border-top-right-radius($corner-radius) {
+	border-top-right-radius: $corner-radius;
+}
+@mixin border-bottom-right-radius($corner-radius) {
+	border-bottom-right-radius: $corner-radius;
+}
+
+// border-radius
+@mixin border-radius($corner-radius) {
+	border-radius: $corner-radius;
+}
