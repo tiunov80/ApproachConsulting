@@ -15,10 +15,6 @@
 				padding: 0;
 			}
 			.inner_caption {
-				//position: absolute;
-				//left: 0;
-				//width: 100%;
-
 				margin: auto;
 			}
 		}
@@ -69,8 +65,10 @@
 			background: url("../img/main_slider/slide_4.jpg") no-repeat;
 			background-size: cover;
 			.inner_caption {
+				text-shadow: 0 0 2em rgba(0, 0, 0, 0.5);
 				@media (max-width: $screen-sm-min) {
-					color: $def_color;
+					padding-top: 10px;
+					background: rgba(63, 63, 63, 0.1);
 				}
 			}
 		}
@@ -86,6 +84,9 @@
 			min-height: 316px;
 			@media (min-width: $screen-sm-min) {
 				min-height: 632px;
+			}
+			h2 {
+				text-transform: uppercase;
 			}
 		}
 		.carousel-inner {
@@ -185,8 +186,9 @@
 	}
 	&.type_3 {
 		.container {
-			@media (max-width: $screen-sm-min) {
-				padding: 0;
+			padding: 0;
+			@media (min-width: $screen-sm-min) {
+				padding: 20px 0 0;
 			}
 		}
 		.sub_txt, p {
@@ -202,6 +204,9 @@
 		}
 		.item {
 			min-height: 335px;
+			.carousel-caption {
+				padding: 0;
+			}
 			.inner_caption {
 				position: relative;
 				color: $def_color;
@@ -225,6 +230,7 @@
 				&:before {
 					background-position: -168px 0;
 					@media (min-width: $screen-sm-min) {
+						left: 0;
 						background-position: 1px -106px;
 					}
 				}
@@ -233,6 +239,7 @@
 				&:before {
 					background-position: -193px 0;
 					@media (min-width: $screen-sm-min) {
+						right: 0;
 						background-position: -49px -106px;
 					}
 				}

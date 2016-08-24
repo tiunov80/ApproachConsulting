@@ -2,12 +2,7 @@
 	min-height: 240px;
 	color: #ffffff;
 	background: #333333;
-
 	padding: 15px 0;
-	@media (min-width: $screen-sm-min) {
-
-	}
-
 	.address_info,
 	.social_info {
 		@media (min-width: $screen-sm-min) {
@@ -31,6 +26,9 @@
 		}
 		.in_icon {
 			background: url("../img/in.png") no-repeat;
+		}
+		.fsb_icon {
+			background: url("../img/fsb.png") no-repeat;
 		}
 		.icon {
 			display: inline-block;

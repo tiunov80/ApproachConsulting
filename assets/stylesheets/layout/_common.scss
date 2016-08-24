@@ -18,9 +18,9 @@ body,
 	min-width: 375px;
 }
 .content {
-	padding: 50px 0 20px;
+	padding: 50px 0 0;
 	@media (min-width: $screen-sm-min) {
-		padding: 0 0 96px;;
+		padding: 0;
 	}
 }
 .container {
@@ -38,8 +38,8 @@ body {
 		height: 100%;
 	}
 }
-a {
-	color: $def_color;
+a, a:hover, a:focus {
+	color: $color_active;
 }
 ul, li {
 	list-style: none;
@@ -72,6 +72,25 @@ h5 {
 	clear: both;
 	display: block;
 }
+.list {
+	li {
+		margin-bottom: 15px;
+		padding-left: 15px;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			margin-top: -2px;
+			background: $color_active;
+			border-radius: 50%;
+		}
+	}
+}
 input[type=checkbox],
 input[type=radio] {
 	margin: 0;
@@ -81,8 +100,9 @@ input[type=radio] {
 .inp,
 .form-control {
 	box-shadow: none;
-	border: 1px solid $bordercolor;
+	//border: 1px solid $bordercolor;
 	color: $default;
+	border-radius: 0;
 }
 select.form-control {
 	padding: 6px;
@@ -104,6 +124,7 @@ select.form-control {
 	font-family: $bold_font;
 }
 .info_section {
+	//border: 1px solid red;
 	padding: 20px 0;
 	@media (min-width: $screen-sm-min) {
 		padding: 80px 0;
@@ -132,7 +153,7 @@ select.form-control {
 		}
 	}
 	&.type_2 {
-
+		//border: 1px solid;
 	}
 	&.type_3 {
 		background: url("../img/bg_3.jpg") no-repeat;
@@ -151,11 +172,183 @@ select.form-control {
 		background-size: cover;
 		color: $def_light;
 		@media (min-width: $screen-sm-min) {
-			padding: 125px 0 80px;
+			padding: 125px 0 40px;
+		}
+		h2 {
+			color: $def_light;
+			@media (min-width: $screen-sm-min) {
+				padding: 45px 0 0;
+			}
+		}
+	}
+	&.type_6 {
+		background: url("../img/bg_4.jpg") no-repeat;
+		background-size: cover;
+		color: $def_light;
+		@media (min-width: $screen-sm-min) {
+			padding: 155px 0 40px;
 		}
 		h2 {
 			color: $def_light;
 		}
 	}
+	&.type_7 {
+		@media (min-width: $screen-sm-min) {
+			padding: 35px 0;
+			.field {
+				padding-top: 70px;
+			}
+		}
+	}
+	&.type_8 {
+		@media (min-width: $screen-sm-min) {
+			padding: 10px 0 60px;
+			.field {
+				padding-top: 40px;
+			}
+		}
+	}
+	&.owner_section {
+		background: url("../img/owner_bg_2.jpg") no-repeat;
+		background-size: cover;
+		color: $def_light;
+		@media (min-width: $screen-sm-min) {
+			padding: 0;
+			.container {
+				min-height: 542px;
+			}
+			.field {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+		@media (min-width: $screen-md-min) {
+			.field {
+				left: 46%;
+				bottom: 30px;
+			}
+		}
+		h5 {
+			margin: 0 0 4px;
+			font-family: $bold_font;
+		}
+		.main_info {
+			font-family: $bold_font;
+		}
+		h5, .main_info, p {
+			@include fontsize(1.6);
+			text-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+		}
+	}
+	&.careers_section {
+		background: url("../img/career_bg.jpg") no-repeat;
+		background-size: cover;
+		color: $def_light;
+		@media (min-width: $screen-sm-min) {
+			padding: 120px 0 10px;
+		}
+		h2 {
+			color: $def_light;
+			@media (min-width: $screen-sm-min) {
+				margin: 0 0 35px;
+			}
+		}
+	}
 }
+//contact us page
+.contacts_section {
+	color: $def_light;
+	@media (min-width: $screen-sm-min) {
+		background: url("../img/map.jpg") no-repeat;
+		background-size: cover;
+	}
+	h2 {
+		color: $def_light;
+		margin: 0 0 30px;
+		@include fontsize(1.6);
+		font-family: $bold_font;
+		@media (min-width: $screen-sm-min) {
+			@include fontsize(3.7);
+		}
+	}
+	.container {
+		min-height: 369px;
+		@media (min-width: $screen-sm-min) {
+			padding: 95px 0 0;
+			min-height: 463px;
+		}
+	}
+	.contacts_info_block {
+		padding: 30px 40px;
+		background: rgba(34, 160, 49, 0.8);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@media (min-width: $screen-sm-min) {
+			top: 95px;
+			width: 38%;
+		}
+		.field {
+			margin-bottom: 25px;
+		}
+		p {
+			line-height: 1.4rem;
+		}
+		a {
+			color: $def_light;
+		}
+		.label_txt {
+			font-family: $ital_bold_font;
+		}
+	}
+}
+.form_section {
+	background: url("../img/contact_bg.jpg") no-repeat;
+	background-size: cover;
+	padding: 40px 0;
+	color: $def_light;
+	h2 {
+		margin: 0 0 15px;
+		@include fontsize(1.7);
+		font-family: $bold_font;
+		letter-spacing: 3px;
+		@media (min-width: $screen-sm-min) {
+			@include fontsize(3.7);
+		}
+	}
 
+	.form {
+		background: rgba(34, 160, 49, 0.6);
+		padding: 20px;
+		@media (min-width: $screen-sm-min) {
+			padding: 27px 40px;
+		}
+		.sub_txt {
+			@include fontsize(1.7);
+			font-family: $light_italic_font;
+			margin-bottom: 25px;
+			@media (min-width: $screen-sm-min) {
+				@include fontsize(2.4);
+				letter-spacing: 3px;
+				margin-bottom: 45px;
+			}
+		}
+		.inp {
+			height: 40px;
+			border: none;
+		}
+		.area {
+			resize: vertical;
+			min-height: 110px;
+		}
+		.form-group {
+			margin-bottom: 25px;
+		}
+		.btn_block {
+			padding-right: 33px;
+		}
+	}
+}

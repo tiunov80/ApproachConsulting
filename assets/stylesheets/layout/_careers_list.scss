@@ -1,0 +1,80 @@
+.careers_list {
+	.panel {
+		margin: 0 !important;
+		border-radius: 0;
+		border: none;
+	}
+	.panel > .panel-heading {
+		padding: 0;
+	}
+	.panel-body {
+		padding: 0;
+		border-top: none !important;
+	}
+	.panel-title {
+		.title_box {
+			//border: none;
+			position: relative;
+			display: block;
+			padding: 25px 70px 25px 0;
+			&:after {
+				background: url("../img/main_slider/slider_arrows.png") -170px -79px no-repeat;
+				content: "";
+				display: block;
+				position: absolute;
+				width: 44px;
+				height: 21px;
+				top: 35px;
+				right: 10px;
+			}
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+			.preview_info {
+				display: none;
+			}
+			&.collapsed {
+				border-bottom: 1px solid #e8e9ef;
+				.preview_info {
+					display: block;
+				}
+				&:after {
+					background-position: -139px -57px;
+					width: 21px;
+					height: 44px;
+					top: 50%;
+					margin-top: -22px;
+				}
+			}
+		}
+		.title {
+			margin: 0 0 15px;
+			color: $color_active;
+			font-family: $bold_font;
+			display: block;
+			@media (min-width: $screen-sm-min) {
+				@include fontsize(3.6);
+				margin: 0 0 10px;
+			}
+		}
+		.preview_info {
+			display: block;
+		}
+	}
+	.description {
+		.title {
+			font-family: $bold_font;
+			margin-bottom: 40px;
+		}
+		h5 {
+			margin-bottom: 40px;
+			color: $color_active;
+			font-family: $ital_bold_font;
+		}
+		.list {
+			margin-bottom: 60px;
+
+		}
+	}
+}

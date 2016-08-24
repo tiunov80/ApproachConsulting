@@ -3,7 +3,7 @@ $base-border-radius: 4px;
 	position: relative;
 	background: $color_active;
 	color: $def_light;
-	border-radius: $base-border-radius;
+	//border-radius: $base-border-radius;
 	padding: 0 15px;
 	font-family: $bold_font;
 	&:hover,
@@ -44,6 +44,14 @@ $base-border-radius: 4px;
 			background: #f0f8f0;
 			&:after {
 				background: url("../img/corner_2.png") no-repeat;
+				background-size: cover;
+			}
+		}
+		&.type3 {
+			background: $color_active;
+			color: $def_light;
+			&:after {
+				background: url("../img/corner_3.png") no-repeat;
 				background-size: cover;
 			}
 		}
