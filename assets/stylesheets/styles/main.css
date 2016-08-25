@@ -6813,11 +6813,11 @@ select.form-control {
     .footer .social_info {
       position: absolute; } }
   .footer .address_info {
-    top: 83px;
+    top: 70px;
     left: 15px;
     font-family: "proxima_nova_ltlight", Arial, Helvetica, sans-serif; }
   .footer .social_info {
-    top: 100px;
+    top: 90px;
     right: 15px; }
     .footer .social_info .lbl_txt {
       position: relative;
