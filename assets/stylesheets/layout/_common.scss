@@ -260,8 +260,7 @@ select.form-control {
 .contacts_section {
 	color: $def_light;
 	@media (min-width: $screen-sm-min) {
-		background: url("../img/map.jpg") no-repeat;
-		background-size: cover;
+		min-height: 462px;
 	}
 	h2 {
 		color: $def_light;
@@ -272,36 +271,22 @@ select.form-control {
 			@include fontsize(3.7);
 		}
 	}
+	.map {
+		width: 100%;
+		min-height: 200px;
+		@media (min-width: $screen-sm-min) {
+			min-height: 462px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+		}
+	}
 	.container {
 		min-height: 369px;
 		@media (min-width: $screen-sm-min) {
 			padding: 95px 0 0;
 			min-height: 463px;
-		}
-	}
-	.contacts_info_block {
-		padding: 30px 40px;
-		background: rgba(34, 160, 49, 0.8);
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		@media (min-width: $screen-sm-min) {
-			top: 95px;
-			width: 38%;
-		}
-		.field {
-			margin-bottom: 25px;
-		}
-		p {
-			line-height: 1.4rem;
-		}
-		a {
-			color: $def_light;
-		}
-		.label_txt {
-			font-family: $ital_bold_font;
 		}
 	}
 }
@@ -349,6 +334,62 @@ select.form-control {
 		}
 		.btn_block {
 			padding-right: 33px;
+		}
+	}
+}
+.contacts_info_block {
+	padding: 30px 40px;
+	background: rgba(34, 160, 49, 0.8);
+	width: 100%;
+	margin-bottom: 40px;
+	@media (min-width: $screen-sm-min) {
+		position: absolute;
+		left: 0;
+		top: -406px;
+		width: 38%;
+		margin-bottom: 0;
+	}
+	h2 {
+		margin: 0 0 29px;
+	}
+	.field {
+		margin-bottom: 25px;
+	}
+	p {
+		line-height: 1.4rem;
+	}
+	a {
+		color: $def_light;
+	}
+	.contacts_inner {
+		padding-left: 30px;
+	}
+	.label_txt {
+		font-family: $ital_bold_font;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: -30px;
+			width: 16px;
+			height: 13px;
+			background: url("../img/icons.png") no-repeat;
+		}
+		&.address_icon {
+			&:before {
+				background-position: 0 -3px;
+			}
+		}
+		&.phone_icon {
+			&:before {
+				background-position: -1px -24px;
+			}
+		}
+		&.mail_icon {
+			&:before {
+				background-position: -1px -49px;
+			}
 		}
 	}
 }

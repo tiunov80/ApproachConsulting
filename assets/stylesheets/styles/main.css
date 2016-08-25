@@ -6317,8 +6317,7 @@ select.form-control {
   color: #ffffff; }
   @media (min-width: 768px) {
     .contacts_section {
-      background: url("../img/map.jpg") no-repeat;
-      background-size: cover; } }
+      min-height: 462px; } }
   .contacts_section h2 {
     color: #ffffff;
     margin: 0 0 30px;
@@ -6329,32 +6328,22 @@ select.form-control {
       .contacts_section h2 {
         font-size: 37px;
         font-size: 3.7rem; } }
+  .contacts_section .map {
+    width: 100%;
+    min-height: 200px; }
+    @media (min-width: 768px) {
+      .contacts_section .map {
+        min-height: 462px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0; } }
   .contacts_section .container {
     min-height: 369px; }
     @media (min-width: 768px) {
       .contacts_section .container {
         padding: 95px 0 0;
         min-height: 463px; } }
-  .contacts_section .contacts_info_block {
-    padding: 30px 40px;
-    background: rgba(34, 160, 49, 0.8);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%; }
-    @media (min-width: 768px) {
-      .contacts_section .contacts_info_block {
-        top: 95px;
-        width: 38%; } }
-    .contacts_section .contacts_info_block .field {
-      margin-bottom: 25px; }
-    .contacts_section .contacts_info_block p {
-      line-height: 1.4rem; }
-    .contacts_section .contacts_info_block a {
-      color: #ffffff; }
-    .contacts_section .contacts_info_block .label_txt {
-      font-family: "proxima_novabold_italic", Arial, Helvetica, sans-serif; }
 
 .form_section {
   background: url("../img/contact_bg.jpg") no-repeat;
@@ -6398,6 +6387,46 @@ select.form-control {
       margin-bottom: 25px; }
     .form_section .form .btn_block {
       padding-right: 33px; }
+
+.contacts_info_block {
+  padding: 30px 40px;
+  background: rgba(34, 160, 49, 0.8);
+  width: 100%;
+  margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .contacts_info_block {
+      position: absolute;
+      left: 0;
+      top: -406px;
+      width: 38%;
+      margin-bottom: 0; } }
+  .contacts_info_block h2 {
+    margin: 0 0 29px; }
+  .contacts_info_block .field {
+    margin-bottom: 25px; }
+  .contacts_info_block p {
+    line-height: 1.4rem; }
+  .contacts_info_block a {
+    color: #ffffff; }
+  .contacts_info_block .contacts_inner {
+    padding-left: 30px; }
+  .contacts_info_block .label_txt {
+    font-family: "proxima_novabold_italic", Arial, Helvetica, sans-serif;
+    position: relative; }
+    .contacts_info_block .label_txt:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 16px;
+      height: 13px;
+      background: url("../img/icons.png") no-repeat; }
+    .contacts_info_block .label_txt.address_icon:before {
+      background-position: 0 -3px; }
+    .contacts_info_block .label_txt.phone_icon:before {
+      background-position: -1px -24px; }
+    .contacts_info_block .label_txt.mail_icon:before {
+      background-position: -1px -49px; }
 
 .header {
   background: rgba(255, 255, 255, 0.8); }
@@ -6784,8 +6813,8 @@ select.form-control {
   display: block; }
   @media (min-width: 768px) {
     .careers_list .panel-title .title {
-      font-size: 36px;
-      font-size: 3.6rem;
+      font-size: 34px;
+      font-size: 3.4rem;
       margin: 0 0 10px; } }
 
 .careers_list .panel-title .preview_info {

@@ -54,7 +54,7 @@
 			font-family: $bold_font;
 			display: block;
 			@media (min-width: $screen-sm-min) {
-				@include fontsize(3.6);
+				@include fontsize(3.4);
 				margin: 0 0 10px;
 			}
 		}
