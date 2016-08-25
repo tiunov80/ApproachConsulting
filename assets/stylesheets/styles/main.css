@@ -6685,14 +6685,21 @@ select.form-control {
     .main_carousel.type_3 .container {
       padding: 20px 0 0; } }
 
+.main_carousel.type_3 h2 {
+  margin: 0;
+  color: #1aa227;
+  font-family: "proxima_novabold_italic", Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 30px; }
+
 .main_carousel.type_3 .sub_txt, .main_carousel.type_3 p {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.2; }
   @media (min-width: 768px) {
     .main_carousel.type_3 .sub_txt, .main_carousel.type_3 p {
-      font-size: 17px;
-      font-size: 1.7rem;
+      font-size: 18px;
+      font-size: 1.8rem;
       line-height: 1.6; } }
 
 .main_carousel.type_3 .carousel-inner {
@@ -6700,6 +6707,9 @@ select.form-control {
 
 .main_carousel.type_3 .item {
   min-height: 335px; }
+  @media (min-width: 768px) {
+    .main_carousel.type_3 .item {
+      min-height: 300px; } }
   .main_carousel.type_3 .item .carousel-caption {
     padding: 0; }
   .main_carousel.type_3 .item .inner_caption {
@@ -6709,13 +6719,11 @@ select.form-control {
     @media (min-width: 768px) {
       .main_carousel.type_3 .item .inner_caption {
         padding: 0 10%; } }
-    .main_carousel.type_3 .item .inner_caption h5 {
-      font-family: "proxima_novabold_italic", Arial, Helvetica, sans-serif; }
     .main_carousel.type_3 .item .inner_caption .sub_txt {
+      color: #1aa227;
       font-family: "proxima_novalight_italic", Arial, Helvetica, sans-serif; }
 
 .main_carousel.type_3 .carousel-control {
-  opacity: 1;
   width: 10%;
   background: transparent; }
   .main_carousel.type_3 .carousel-control.left:before {
@@ -6723,13 +6731,13 @@ select.form-control {
     @media (min-width: 768px) {
       .main_carousel.type_3 .carousel-control.left:before {
         left: 0;
-        background-position: 1px -106px; } }
+        background-position: -101px -107px; } }
   .main_carousel.type_3 .carousel-control.right:before {
     background-position: -193px 0; }
     @media (min-width: 768px) {
       .main_carousel.type_3 .carousel-control.right:before {
         right: 0;
-        background-position: -49px -106px; } }
+        background-position: -152px -107px; } }
 
 .main_carousel .carousel-control {
   z-index: 40; }

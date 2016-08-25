@@ -204,10 +204,10 @@
 				</div>
 			</section>
 			<section class="main_carousel type_2">
-				<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+				<div id="carousel2" class="carousel slide carousel2" data-ride="carousel">
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-						<div class="item active item_1">
+						<div class="item item_1 active">
 							<div class="carousel-caption container">
 								<div class="inner_caption">
 									<h2>Imagine if you could...</h2>
@@ -223,9 +223,6 @@
 										rewards of successfully leveraging your new strategic asset to further
 										accelerate your business opportunities.
 									</p>
-									<a href="files/Major_Healthcare_Provider_Organization_Addresses_Typical_Growth_Challenges_By_Optimizing_Its_Operational_Governance,_Resources,_Processes.pdf"
-									   target="_blank" class="btn info_btn">Learn more about our successes
-									</a>
 								</div>
 							</div>
 						</div>
@@ -247,14 +244,17 @@
 										60% of projects fail to meet schedule, budget & quality goals (IBM Change
 										Management Survey of 1500 Executives).
 									</p>
+									<a href="files/Major_Healthcare_Provider_Organization_Addresses_Typical_Growth_Challenges_By_Optimizing_Its_Operational_Governance,_Resources,_Processes.pdf"
+									   target="_blank" class="btn info_btn">Learn more about our successes
+									</a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic1" role="button"
+					<a class="left carousel-control" href="#carousel2" role="button"
 					   data-slide="prev"></a>
-					<a class="right carousel-control" href="#carousel-example-generic1" role="button"
+					<a class="right carousel-control" href="#carousel2" role="button"
 					   data-slide="next"></a>
 				</div>
 			</section>
@@ -268,6 +268,7 @@
 					<div>5550 W Executive Drive</div>
 					<div>Suite 540</div>
 					<div>Tampa, FL 33609</div>
+					<div>Phone: 813.666.1154​</div>
 				</address>
 				<div class="social_info">
 					<span class="lbl_txt italic_bold_txt">Follow us</span>
@@ -284,4 +285,9 @@
 	<script src="js/lib.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/common.js"></script>
+	<script>
+		$('.carousel2').carousel({
+			interval: false
+		});
+	</script>
 </html>

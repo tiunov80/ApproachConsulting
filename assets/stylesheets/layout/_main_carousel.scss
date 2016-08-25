@@ -191,11 +191,18 @@
 				padding: 20px 0 0;
 			}
 		}
+		h2 {
+			margin: 0;
+			color: $color_active;
+			font-family: $ital_bold_font;
+			text-align: center;
+			padding-top: 30px;
+		}
 		.sub_txt, p {
 			@include fontsize(1.4);
 			line-height: 1.2;
 			@media (min-width: $screen-sm-min) {
-				@include fontsize(1.7);
+				@include fontsize(1.8);
 				line-height: 1.6;
 			}
 		}
@@ -204,6 +211,9 @@
 		}
 		.item {
 			min-height: 335px;
+			@media (min-width: $screen-sm-min) {
+				min-height: 300px;
+			}
 			.carousel-caption {
 				padding: 0;
 			}
@@ -214,16 +224,14 @@
 				@media (min-width: $screen-sm-min) {
 					padding: 0 10%;
 				}
-				h5 {
-					font-family: $ital_bold_font;
-				}
 				.sub_txt {
+					color: $color_active;
 					font-family: $light_italic_font;
 				}
 			}
 		}
 		.carousel-control {
-			opacity: 1;
+			//opacity: 1;
 			width: 10%;
 			background: transparent;
 			&.left {
@@ -231,7 +239,7 @@
 					background-position: -168px 0;
 					@media (min-width: $screen-sm-min) {
 						left: 0;
-						background-position: 1px -106px;
+						background-position: -101px -107px;
 					}
 				}
 			}
@@ -240,7 +248,7 @@
 					background-position: -193px 0;
 					@media (min-width: $screen-sm-min) {
 						right: 0;
-						background-position: -49px -106px;
+						background-position: -152px -107px;
 					}
 				}
 			}
