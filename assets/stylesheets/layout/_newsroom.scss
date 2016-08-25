@@ -1,0 +1,11 @@
+.news_section {
+	background: url("../img/news_bg.jpg") no-repeat;
+	background-size: cover;
+	color: $def_light;
+	@media (min-width: $screen-sm-min) {
+		padding: 150px 0 0;
+	}
+	h2 {
+		color: $def_light;
+	}
+}

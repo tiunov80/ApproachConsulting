@@ -6863,3 +6863,13 @@ select.form-control {
       height: 46px;
       background-size: cover;
       margin-left: 30px; }
+
+.news_section {
+  background: url("../img/news_bg.jpg") no-repeat;
+  background-size: cover;
+  color: #ffffff; }
+  @media (min-width: 768px) {
+    .news_section {
+      padding: 150px 0 0; } }
+  .news_section h2 {
+    color: #ffffff; }
