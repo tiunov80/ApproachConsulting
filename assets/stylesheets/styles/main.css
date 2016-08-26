@@ -6706,7 +6706,7 @@ select.form-control {
   max-height: 335px; }
 
 .main_carousel.type_3 .item {
-  min-height: 335px; }
+  min-height: 245px; }
   @media (min-width: 768px) {
     .main_carousel.type_3 .item {
       min-height: 300px; } }
@@ -6726,14 +6726,17 @@ select.form-control {
 .main_carousel.type_3 .carousel-control {
   width: 10%;
   background: transparent; }
+  @media (max-width: 768px) {
+    .main_carousel.type_3 .carousel-control:before {
+      margin-top: -36px; } }
   .main_carousel.type_3 .carousel-control.left:before {
-    background-position: -168px 0; }
+    background-position: -222px 0; }
     @media (min-width: 768px) {
       .main_carousel.type_3 .carousel-control.left:before {
         left: 0;
         background-position: -101px -107px; } }
   .main_carousel.type_3 .carousel-control.right:before {
-    background-position: -193px 0; }
+    background-position: -247px 0; }
     @media (min-width: 768px) {
       .main_carousel.type_3 .carousel-control.right:before {
         right: 0;
